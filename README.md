@@ -8,11 +8,11 @@ Hi there!. This repo is mean for the solution for the deel backend task, conside
 
 ## TIME TRACKING (AROUND 4 HOURS IN TOTAL)
 
-- 30/06 - setting app initial skeleton of app and config - 20 minutes
-- 30/06 - Job and Contracts API - 90 minutes
-- 01/07 - Testing - 60 minutes
-- 01/07 - Write balances API - 30 minutes
-- 01/07 - Write Admin API - 30 minutes
+- setting app initial skeleton of app and config - 20 minutes
+- Job and Contracts API - 90 minutes
+- Testing - 60 minutes
+- Write balances API - 30 minutes
+- Write Admin API - 30 minutes
 ## SETUP
 
 - clone this repo
@@ -25,9 +25,8 @@ Hi there!. This repo is mean for the solution for the deel backend task, conside
 
 ## DEPLOYMENT
 
-- docker build -t deel .
-- docker run -dp 3000:3001 deel
-- optional: run tests against docker with changing the port for testing to 3000
+- docker-compose up -d
+- (You can also run the tests against the docker container)
 # DEEL BACKEND TASK DESCRIPTION
 
 [See description](TASK.md)
