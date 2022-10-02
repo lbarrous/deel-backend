@@ -1,6 +1,8 @@
-FROM node:14.19.3-alpine3.16
+FROM node:14
 
 WORKDIR /app/contract-processor
+
+RUN apt-get install python -y
 
 COPY package.json .
 

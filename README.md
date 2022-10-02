@@ -1,17 +1,18 @@
 ## DESCRIPTION
 
-Hi there!. This repo is mean to show the solution for the deel backend task, considering the following:
+Hi there!. This repo is mean for the solution for the deel backend task, considering the following:
 
-- Using typescript for new and added modules
+- Used typescript on new and added modules to improve code quality and readability.
 - Typical MVC architecture, with Routes, Controllers, Services.
-- Classes are structured using DDD (Domain drive design) (Job, Admin, Contracts, etc). This help to separate the layers.
+- Classes are structured using DDD (Domain driven design) (Job, Admin, Contracts, etc). This help to separate the layers.
 
-## TIME TRACKING (TOTAL 4 HOURS)
+## TIME TRACKING (AROUND 4 HOURS IN TOTAL)
 
-- 30/06 - setting up app and config - 20 minutes
+- 30/06 - setting app initial skeleton of app and config - 20 minutes
 - 30/06 - Job and Contracts API - 90 minutes
-- 01/07 - Readme modification and testing - 30 minutes
-- 01/07 - Balances API - 35 minutes
+- 01/07 - Testing - 60 minutes
+- 01/07 - Write balances API - 30 minutes
+- 01/07 - Write Admin API - 30 minutes
 ## SETUP
 
 - clone this repo
@@ -21,6 +22,12 @@ Hi there!. This repo is mean to show the solution for the deel backend task, con
 
 - npm start
 - npm run test (in another terminal)
+
+## DEPLOYMENT
+
+- docker build -t deel .
+- docker run -dp 3000:3001 deel
+- optional: run tests against docker with changing the port for testing to 3000
 # DEEL BACKEND TASK DESCRIPTION
 
 [See description](TASK.md)
