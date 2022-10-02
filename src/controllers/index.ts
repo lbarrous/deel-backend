@@ -1,1 +1,1 @@
-export * from './contracts-controller';
+export * from './contracts-controller'
