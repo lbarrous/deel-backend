@@ -22,6 +22,7 @@ export interface IContract {
 export interface IProfile {
   id: number,
   balance: number,
+  type: ProfileTypes,
 }
 
 export interface IJob {
