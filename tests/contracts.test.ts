@@ -8,12 +8,7 @@ describe('Contracts integration test ', () => {
     it('GETs /contracts/:id a valid contract and valid profile', async () => {
       const headers = { profile_id: 1 }
 
-      const response = await axios.get<IContract>(
-                `${serverUrl}/contracts/1`,
-                {
-                  headers
-                }
-      )
+      const response = await axios.get<IContract>(`${serverUrl}/contracts/1`, { headers })
       expect(response.status).toBe(200)
       expect(response.data.status).toBe('terminated')
       expect(response.data.terms).toBe('bla bla bla')
@@ -59,12 +54,9 @@ describe('Contracts integration test ', () => {
 
     it('GET all contracts /contracts/ a for a valid Client ID', async () => {
       const headers = { profile_id: 1 }
-      const response = await axios.get<IContract[]>(
-                `${serverUrl}/contracts`,
-                {
-                  headers
-                }
-      )
+      const response = await axios.get<IContract[]>(`${serverUrl}/contracts`, {
+        headers
+      })
 
       expect(response.data.length).toBe(1)
       expect(response.data[0].ClientId).toBe(1)
@@ -74,12 +66,9 @@ describe('Contracts integration test ', () => {
 
     it('GET all contracts /contracts/ a for a valid Contractor ID', async () => {
       const headers = { profile_id: 7 }
-      const response = await axios.get<IContract[]>(
-                `${serverUrl}/contracts`,
-                {
-                  headers
-                }
-      )
+      const response = await axios.get<IContract[]>(`${serverUrl}/contracts`, {
+        headers
+      })
 
       expect(response.data.length).toBe(3)
       expect(response.data[0].status).toBe(ContractStatus.IN_PROGRESS)

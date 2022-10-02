@@ -19,6 +19,6 @@ export class ContractController {
       }
     })
 
-    res.json(contracts).end()
+    res.json(contracts).send()
   }
 }

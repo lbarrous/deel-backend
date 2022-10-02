@@ -3,11 +3,14 @@ const bodyParser = require('body-parser')
 const { sequelize } = require('./model')
 const { getProfile } = require('./middleware/getProfile')
 const { contractRouter } = require('./routes/contracts-routes')
+const { jobRouter } = require('./routes/jobs-routes')
 
 const app = express()
 
 app.use(bodyParser.json())
 app.use('/', contractRouter)
+app.use('/', jobRouter)
+
 app.set('sequelize', sequelize)
 app.set('models', sequelize.models)
 

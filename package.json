@@ -13,8 +13,9 @@
     "seed": "node ./scripts/seedDb.js",
     "test": "npm run test:integration",
     "test:unit": "jest ./dist",
-    "test:integration": "jest ./test",
-    "build": "tsc"
+    "test:integration": "jest --detectOpenHandles ./test",
+    "build": "tsc",
+    "pretest": "npm run seed"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
